@@ -1,6 +1,8 @@
 import streamlit as st
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-st.title('EDA')
+st.title('Разведочный анализ данных о клиентах')
 
 cols = ['AGREEMENT_RK',
 'TARGET',
@@ -18,4 +20,9 @@ option = st.selectbox(
     'Распределение признака:',
     cols)
 
-st.write(option)
+f, ax = plt.subplots()
+sns.set(rc={'figure.figsize':(7,5)})
+sns.set_style("whitegrid")
+feature = option
+sns.histplot(data=df, x=feature).set_title(f"Распределение признака {option}")
+st.pyplot(f)
