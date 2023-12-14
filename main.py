@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 
+
 df = pd.read_csv('clients.csv', index_col=0)
 
 st.title('Разведочный анализ данных о клиентах')
