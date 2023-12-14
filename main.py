@@ -2,6 +2,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+df = pd.read_csv('clients.csv')
+
 st.title('Разведочный анализ данных о клиентах')
 
 cols = ['AGREEMENT_RK',
